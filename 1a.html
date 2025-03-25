@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Guide</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .stream {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  .stream h2 {
+    margin: 0;
+    color: #4CAF50;
+  }
+  .stream button {
+    align-self: flex-end;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  .stream button:hover {
+    background-color: #45a049;
+  }
+  .details {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  .details ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  .details li {
+    margin: 5px 0;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .footer button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+  }
+  .footer button:hover {
+    background-color: #45a049;
+  }
+</style>
+<script>
+  function toggleDetails(streamId) {
+    const detailsDiv = document.getElementById(streamId);
+    if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
+      detailsDiv.style.display = 'block';
+    } else {
+      detailsDiv.style.display = 'none';
+    }
+  }
+</script>
+</head>
+<body>
+<h1>Education Guide</h1>
+<p>Explore different streams of study, available courses, and colleges:</p>
+
+<div class="stream">
+  <h2>Science</h2>
+  <button onclick="toggleDetails('scienceDetails')">View Details</button>
+  <div id="scienceDetails" class="details">
+    <h3>Courses:</h3>
+    <ul>
+      <li>Bachelor of Science (B.Sc)</li>
+      <li>Master of Science (M.Sc)</li>
+      <li>Doctor of Philosophy (Ph.D)</li>
+    </ul>
+    <h3>Colleges:</h3>
+    <ul>
+      <li>Indian Institute of Science (IISc)</li>
+      <li>St. Stephen's College</li>
+      <li>Delhi University</li>
+    </ul>
+  </div>
+</div>
+
+<div class="stream">
+  <h2>Arts</h2>
+  <button onclick="toggleDetails('artsDetails')">View Details</button>
+  <div id="artsDetails" class="details">
+    <h3>Courses:</h3>
+    <ul>
+      <li>Bachelor of Arts (B.A)</li>
+      <li>Master of Arts (M.A)</li>
+      <li>Doctor of Philosophy (Ph.D)</li>
+    </ul>
+    <h3>Colleges:</h3>
+    <ul>
+      <li>Jawaharlal Nehru University (JNU)</li>
+      <li>Lady Shri Ram College</li>
+      <li>Banaras Hindu University (BHU)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="stream">
+  <h2>Commerce</h2>
+  <button onclick="toggleDetails('commerceDetails')">View Details</button>
+  <div id="commerceDetails" class="details">
+    <h3>Courses:</h3>
+    <ul>
+      <li>Bachelor of Commerce (B.Com)</li>
+      <li>Master of Commerce (M.Com)</li>
+      <li>Chartered Accountant (CA)</li>
+    </ul>
+    <h3>Colleges:</h3>
+    <ul>
+      <li>Shri Ram College of Commerce (SRCC)</li>
+      <li>Christ University</li>
+      <li>Symbiosis College of Arts and Commerce</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2023 Education Guide. All rights reserved.</p>
+  <button onclick="window.location.href='mailto:kkjeedigunta@gmail.com'">Contact Info</button>
+</div>
+
+</body>
+</html>
